@@ -26,6 +26,14 @@ function _keybase() {
             logout)
                 return 0
                 ;;
+            switch)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-f --force' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
             status)
                 case $cur in
                     -*)
