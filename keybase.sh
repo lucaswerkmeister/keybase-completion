@@ -14,6 +14,13 @@ function _keybase() {
                                 fi
                                 COMPREPLY+=($(compgen -W "$commands" -- ${cur}))
                                 ;;
+                        login)
+                                case $cur in
+                                        -*)
+                                                COMPREPLY+=($(compgen -W '-P --no-key-pull' -- ${cur}))
+                                                ;;
+                                esac
+                                ;;
                 esac
         else
                 COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
