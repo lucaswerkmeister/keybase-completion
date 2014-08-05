@@ -66,11 +66,25 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            list-sigs|list-signatures)
+                case $prev in
+                    -t|--type)
+                        COMPREPLY+=($(compgen -W 'track proof currency self' -- ${cur}))
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-r --revoked -v --verbose -j --json -t --type' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
     fi
 }
-complete -o nospace -F _keybase keybase
+complete -F _keybase keybase
 
 # vim: set ts=4 sw=4 ss=4 et:
