@@ -21,6 +21,9 @@ function _keybase() {
                                                 ;;
                                 esac
                                 ;;
+                        logout)
+                                return 0
+                                ;;
                 esac
         else
                 COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
