@@ -1,3 +1,4 @@
+# vim: set et:
 function _keybase() {
         COMPREPLY=()
         local cur="${COMP_WORDS[COMP_CWORD]}"
