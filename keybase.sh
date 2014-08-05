@@ -24,6 +24,13 @@ function _keybase() {
                         logout)
                                 return 0
                                 ;;
+                        status)
+                                case $cur in
+                                        -*)
+                                                COMPREPLY+=($(compgen -W '-T --text' -- ${cur}))
+                                                ;;
+                                esac
+                                ;;
                 esac
         else
                 COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
