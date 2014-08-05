@@ -80,6 +80,19 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            id|identify)
+                case $prev in
+                    -a|--assert)
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-a --assert' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
