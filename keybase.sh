@@ -134,6 +134,14 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            cert)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-a --all' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
