@@ -15,6 +15,9 @@ function _keybase() {
                 fi
                 COMPREPLY+=($(compgen -W "$commands" -- ${cur}))
                 ;;
+            join|signup)
+                return 0
+                ;;
             login)
                 case $cur in
                     -*)
