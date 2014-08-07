@@ -126,6 +126,14 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            gen)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-p --push -s --secret -u --update' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
