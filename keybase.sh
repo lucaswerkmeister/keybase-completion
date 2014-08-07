@@ -142,6 +142,14 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            btc|bitcoin)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-f --force' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
