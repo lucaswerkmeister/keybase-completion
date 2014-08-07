@@ -96,6 +96,28 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            sig|sign)
+                case $prev in
+                    -m|--message)
+                        return 0
+                        ;;
+                    -o|--output)
+                        _filedir
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-m --message -b --binary --clearsign --detach-sign -o --output' -- ${cur}))
+                        return 0
+                        ;;
+                    *)
+                        _filedir
+                        return 0
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
