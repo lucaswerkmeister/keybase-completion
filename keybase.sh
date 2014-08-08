@@ -157,4 +157,4 @@ function _keybase() {
 }
 complete -F _keybase keybase
 
-# vim: set ts=4 sw=4 ss=4 et:
+# vim: set ts=4 sw=4 et:
