@@ -237,6 +237,14 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            revoke)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-f --force' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
