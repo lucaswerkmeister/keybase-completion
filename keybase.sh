@@ -330,7 +330,22 @@ function _keybase() {
                 esac
                 return 0
                 ;;
-
+            config)
+                case $prev in
+                    --get)
+                        return 0
+                        ;;
+                    -s|--server)
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '--get -j --json --pretty -s --server -S --reset-server' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
