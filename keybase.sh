@@ -302,6 +302,34 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            dec|decrypt)
+                case $prev in
+                    -a|--assert)
+                        _keybase_assertion
+                        return 0
+                        ;;
+                    -S|--signed-by)
+                        _keybase_tracked
+                        return 0
+                        ;;
+                    -m|--message)
+                        return 0
+                        ;;
+                    -o|--output)
+                        _filedir
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-6 --base64 -r --track-remote -l --track-local -a --assert --batch --prompt-remote -t --track -I --no-id -s --signed -S --signed-by -m --message -o --output' -- ${cur}))
+                        ;;
+                    *)
+                        _filedir
+                        ;;
+                esac
+                return 0
+                ;;
 
         esac
     else
