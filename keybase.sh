@@ -158,6 +158,14 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            list-tracking)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-v --verbose -j --json' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
