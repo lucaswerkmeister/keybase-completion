@@ -261,6 +261,26 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            prove|proof)
+                case $prev in
+                    -o|--output)
+                        _filedir
+                        return 0
+                        ;;
+                    twitter|github|web|dns|reddit|coinbase)
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-f --force -o --output' -- ${cur}))
+                        ;;
+                    *)
+                        COMPREPLY+=($(compgen -W 'twitter github web dns rediit coinbase' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
