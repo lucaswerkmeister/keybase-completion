@@ -1,6 +1,37 @@
 keybase-completion
 ==================
 
-Bash-Completion for [keybase.io Command Line Client](https://keybase.io/docs/command_line)
+The [keybase command line tool](https://keybase.io/docs/command_line) lacks Tab completion by default (see [Issue #147](https://github.com/keybase/keybase-issues/issues/147) in the Keybase Bugtracker). This is an approach to satisfy the needs and lift the usabilty of keybase on the command line to a whole new level.
 
-To use this, simply copy the Bash-File into `/etc/bash_completion.d/`
+Installation
+------------
+
+#####Global
+
+```sh
+git clone git@github.com:dtiersch/keybase-completion.git
+cd keybase-completion
+sudo cp keybase.sh /etc-bash_completion.d/keybase
+sudo chmod a+r /etc-bash_completion.d/keybase
+```
+
+#####User Space
+```sh
+git clone git@github.com:dtiersch/keybase-completion.git
+```
+Then add the following line to your `.bashrc`:
+```sh
+test -r /path/to/repository/keybase.sh && source $_
+```
+
+Version
+-------
+
+1.0
+
+License
+-------
+
+MIT
+
+**Free Software, Hell Yeah!**
