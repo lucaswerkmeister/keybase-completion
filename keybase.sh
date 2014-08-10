@@ -188,6 +188,14 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            unverify)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-k --remove-key -b --batch -K --keep-key' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
