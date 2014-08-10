@@ -245,6 +245,14 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            revoke-sig|revoke-signatures)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-q --seqno' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
