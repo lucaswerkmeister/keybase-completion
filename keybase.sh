@@ -346,6 +346,53 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            dir|code-sign)
+                if [[ $COMP_CWORD -gt 2 ]]; then
+                    case "${COMP_WORDS[2]}" in
+                        sign)
+                            case $prev in
+                                -o|--output)
+                                    _filedir
+                                    return 0
+                                    ;;
+                                -p|--presets)
+                                    return 0
+                                    ;;
+                            esac
+                            case $cur in
+                                -*)
+                                    COMPREPLY+=($(compgen -W '-o --output -p --presets -q --quiet' -- ${cur}))
+                                    ;;
+                                *)
+                                    _filedir -d
+                                    ;;
+                            esac
+                            ;;
+                        verify)
+                            case $prev in
+                                -i|--input)
+                                    _filedir
+                                    return 0
+                                    ;;
+                                -a|--assert)
+                                    _keybase_assertion
+                                    return 0
+                                    ;;
+                            esac
+                            case $cur in
+                                -*)
+                                    COMPREPLY+=($(compgen -W '-i --input -q --quiet -s --strict -P --preserve-tmp-files --ignore-verify-errors -r --track-remotes -l --track-local -a --assert --batch --prompt-remote -t --track -I --no-id' -- ${cur}))
+                                    ;;
+                                *)
+                                    _filedir -d
+                                    ;;
+                            esac
+                            ;;
+                    esac
+                else
+                    COMPREPLY+=($(compgen -W 'sign verify' -- ${cur}))
+                fi
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
