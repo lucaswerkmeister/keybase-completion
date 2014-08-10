@@ -1,3 +1,11 @@
+function _keybase_assertion() {
+    return 0
+}
+
+function _keybase_tracked() {
+    return 0
+}
+
 function _keybase() {
     local cur prev words cword split
     _init_completion -s || return
@@ -86,6 +94,7 @@ function _keybase() {
             id|identify)
                 case $prev in
                     -a|--assert)
+                        _keybase_assertion
                         return 0
                         ;;
                 esac
@@ -177,9 +186,11 @@ function _keybase() {
             verify)
                 case $prev in
                     -a|--asert)
+                        _keybase_assertion
                         return 0
                         ;;
                     -S|--signed-by)
+                        _keybase_tracked
                         return 0
                         ;;
                     -m|--message)
@@ -207,6 +218,7 @@ function _keybase() {
             track)
                 case $prev in
                     -a|--assert)
+                        _keybase_assertion
                         return 0
                         ;;
                 esac
