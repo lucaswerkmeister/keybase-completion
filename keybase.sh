@@ -204,6 +204,19 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            track)
+                case $prev in
+                    -a|--assert)
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-r --track-remote -l --track-local -a --asert --batch --prompt-remote' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
