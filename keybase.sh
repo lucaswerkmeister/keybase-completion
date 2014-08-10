@@ -166,6 +166,28 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            verify)
+                case $prev in
+                    -a|--asert)
+                        return 0
+                        ;;
+                    -S|--signed-by)
+                        return 0
+                        ;;
+                    -m|--message)
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-6 --base64 -r --track-remote -l --track-local -a --assert --bastch --promt-remote -t --track -I --no-id -s --signed -S --signed-by -m --message' -- ${cur}))
+                        ;;
+                    *)
+                        _filedir
+                        ;;
+                esac
+                return 0
+                ;;
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
