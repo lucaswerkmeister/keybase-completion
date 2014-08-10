@@ -281,6 +281,28 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            enc|encrypt)
+                case $prev in
+                    -a|--assert)
+                        _keybase_assertion
+                        return 0
+                        ;;
+                    -m|--message)
+                        return 0
+                        ;;
+                    -o|--output)
+                        _filedir
+                        return 0
+                        ;;
+                esac
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-r --track-remote -l --track-local -a --assert --batch --prompt-remote -s --sign -m --message -b --binary -o --output' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
+
         esac
     else
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
