@@ -126,6 +126,14 @@ function _keybase() {
                 esac
                 return 0
                 ;;
+            push)
+                case $cur in
+                    -*)
+                        COMPREPLY+=($(compgen -W '-g --gen -p --show-public-only-keys --skip-add-email --add-email -s --secret -u --update' -- ${cur}))
+                        ;;
+                esac
+                return 0
+                ;;
             gen)
                 case $cur in
                     -*)
