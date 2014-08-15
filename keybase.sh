@@ -269,7 +269,7 @@ function _keybase() {
                         _filedir
                         return 0
                         ;;
-                    twitter|github|web|dns|reddit|coinbase)
+                    twitter|github|web|dns|reddit|coinbase|hackernews)
                         return 0
                         ;;
                 esac
@@ -278,7 +278,7 @@ function _keybase() {
                         COMPREPLY+=($(compgen -W '-f --force -o --output' -- ${cur}))
                         ;;
                     *)
-                        COMPREPLY+=($(compgen -W 'twitter github web dns rediit coinbase' -- ${cur}))
+                        COMPREPLY+=($(compgen -W 'twitter github web dns rediit coinbase hackernews' -- ${cur}))
                         ;;
                 esac
                 return 0
