@@ -3,7 +3,7 @@ function _keybase_assertion() {
 }
 
 function _keybase_tracked() {
-    local user="$(grep '"username":' $HOME/.keybase/keybase.idb/*/*/* | sed -r 's/.*"username":"([^"]+).*/\1/')"
+    local user="$(grep '"username":' $HOME/.keybase/keybase.idb/*/*/* | sed -r 's/.*"username":"([^"]+).*/\1/' | sort)"
     COMPREPLY+=($(compgen -W "$user" -- ${cur}))
 }
 
