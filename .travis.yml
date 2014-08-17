@@ -4,5 +4,5 @@ python:
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -y bash-completion
-  - source /etc/bash_completion
+  - echo 'source /etc/bash_completion' >> ~/.bash_profile
 script: python ./test.py
