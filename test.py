@@ -2,6 +2,7 @@
 # Bash completion test library from https://github.com/lacostej/unity3d-bash-completion
 
 import unittest
+import os
 from lib.completion import BashCompletionTest
 
 class KeybaseTestCase(BashCompletionTest):
@@ -14,6 +15,17 @@ class KeybaseTestCase(BashCompletionTest):
 
     def test_subcommand_single(self):
         self.run_complete("ide", "identify")
+
+    def test_id(self):
+        os.environ['HOME'] = 'test'
+        self.run_complete("id ", "chris max salandas")
+
+    def test_id_single(self):
+        os.environ['HOME'] = 'test'
+        self.run_complete("id s", "salandas")
+
+    def test_id_param(self):
+        self.run_complete("id -", "-a --assert")
 
     def run_complete(self, command, expected):
         completion_file="keybase.sh"
