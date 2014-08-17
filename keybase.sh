@@ -362,6 +362,8 @@ function _keybase() {
                                     return 0
                                     ;;
                                 -p|--presets)
+                                    compopt -o nospace
+                                    COMPREPLY+=($(compgen -W 'git kb dropbox none' -- ${cur}))
                                     return 0
                                     ;;
                             esac
