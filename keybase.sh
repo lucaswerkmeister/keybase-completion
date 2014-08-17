@@ -105,6 +105,9 @@ function _keybase() {
                     -*)
                         COMPREPLY+=($(compgen -W '-a --assert' -- ${cur}))
                         ;;
+                    *)
+                        _keybase_tracked
+                        ;;
                 esac
                 return 0
                 ;;
