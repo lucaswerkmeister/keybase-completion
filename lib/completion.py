@@ -26,16 +26,6 @@ class Completion():
         return out.communicate()
 
 class CompletionTestCase(unittest.TestCase):
-    def test_completion_internal(self):
-        self.assertEqualCompletion("fake", "",     "fake ",     "fake ",     1, 5)
-        self.assertEqualCompletion("fake", " ",    "fake  ",    "fake ",     1, 6)
-        self.assertEqualCompletion("fake", "a",    "fake a",    "fake a",    1, 6)
-        self.assertEqualCompletion("fake", "aa",   "fake aa",   "fake aa",   1, 7)
-        self.assertEqualCompletion("fake", "a ",   "fake a ",   "fake a ",   2, 7)
-        self.assertEqualCompletion("fake", "a   ", "fake a   ", "fake a ",   2, 9)
-        self.assertEqualCompletion("fake", "a a",  "fake a a",  "fake a a",  2, 8)
-        self.assertEqualCompletion("fake", "a a ", "fake a a ", "fake a a ", 3, 9)
-
     def assertEqualCompletion(self, program, cline, line, words, cword, point):
         c = Completion()
         c.prepare(program, cline)
@@ -49,16 +39,6 @@ class BashCompletionTest(unittest.TestCase):
     def run_complete(self, completion_file, program, command, expected):
         stdout,stderr = Completion().run(completion_file, program, command)
         self.assertEqual(stdout, expected + '\n')
-
-class AdsfTestCase(BashCompletionTest):
-    def test_orig(self):
-        self.run_complete("other arguments f", "four five")
-
-    def run_complete(self, command, expected):
-        completion_file="adsf-completion"
-        program="asdf"
-        super(AdsfTestCase, self).run_complete(completion_file, program, command, expected)
-
 
 if (__name__=='__main__'):
     unittest.main()
