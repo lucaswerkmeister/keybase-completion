@@ -38,7 +38,7 @@ You can check the integrity of Releases on 2 different ways. For one every git t
 ```
 git tag -v version_1.1
 ```
-The direcoty is signed as well, you can check that with keybase
+The whole directory (in the `master` branch) is signed as well, you can check that with keybase
 ```
 keybase dir verify
 ```
