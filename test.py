@@ -39,6 +39,12 @@ class KeybaseTestCase(BashCompletionTest):
     def test_proof_single(self):
         self.run_complete("proof twitter ", "")
 
+    def test_assertion(self):
+        self.run_complete("id --assert ", "github: coinbase: twitter: web: key: keybase: reddit: hackernews: dns:")
+
+    def test_assertion_single(self):
+        self.run_complete("id --assert gi", "github:")
+
     def run_complete(self, command, expected):
         completion_file="keybase.sh"
         program="keybase"
