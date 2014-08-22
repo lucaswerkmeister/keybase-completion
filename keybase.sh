@@ -194,7 +194,7 @@ function _keybase() {
                 ;;
             verify)
                 case $prev in
-                    -a|--asert)
+                    -a|--assert)
                         _keybase_assertion
                         return 0
                         ;;
@@ -233,7 +233,7 @@ function _keybase() {
                 esac
                 case $cur in
                     -*)
-                        COMPREPLY+=($(compgen -W '-r --track-remote -l --track-local -a --asert --batch --prompt-remote' -- ${cur}))
+                        COMPREPLY+=($(compgen -W '-r --track-remote -l --track-local -a --assert --batch --prompt-remote' -- ${cur}))
                         ;;
                 esac
                 return 0
