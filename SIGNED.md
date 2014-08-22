@@ -3,31 +3,31 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQR8BAABCgBmBQJT8LLMXxSAAAAAAC4AKGlzc3Vlci1mcHJAbm90YXRpb25zLm9w
+iQR8BAABCgBmBQJT9z8YXxSAAAAAAC4AKGlzc3Vlci1mcHJAbm90YXRpb25zLm9w
 ZW5wZ3AuZmlmdGhob3JzZW1hbi5uZXQ4QjQyNzFDMzg5QzlBNUE5OTczNTE5M0E5
-RENCRTMyNEQyMjUxNUMxAAoJEJ3L4yTSJRXB1J0f/jcrKA80k6jMxfwCRcWmU5oX
-CTp0DKVjIDJc+XtigT61uXXTqYGJddj1TbuS5iuN0UMfXyLfv5dvs+9rjIWnlVVQ
-+O5kOrp+62tW3Pthjgdhhr49u7w9s4WXd9mfR2y+udWjY7cBtb6Psw8xfJwqwJXC
-N4hPp/WpgH3D/rxwRfgMGEI4gN1Szqo35rYrZC82GvKiMu7ALrmOHtwliPQXO9Lr
-xDg1agkWaP1bwzlOWrqX19SrXpq3TpgYgvLug099Cz2wQoqlY9qPdQZRlJY1Qy4/
-gyUhFU+7qM4aX/YT32i0ocn2HY9Oe6INeHR9nhNMX84K3khRGffSR4MkcrPqpHOn
-BivpwX2RBcAUVZdi2nQidnIlkv7KIpwCr4Ed3qsPju/8jiookAAGK7diLytm3uq/
-GWvvBXDse/1pk7/25LNfML9XbCYYsKFv6WJG4NyUnnY8UOGnSbhxq5Ur+fJ1kaB1
-fIB6ONgVs8uRhcT1Y8B8oREh985WkOWh2xuP94wMJm3JPDdaMEvgk1ToiSJF3lUZ
-+Gb+0kYcriQ00KTyfLBZoU7d8t4yqDErknlmC9YFFTKs35pR7yJi3lz2bkO7rADk
-VPU6MN1d+sTtJL9xE7v/DCPDqn96+R9JYWAkd0PMdLJILAFh9YaV7IOC433zdiLL
-Am9U2cZ9M+NgSeWo5VgEDxEEbe3jw13//F4HtagPkDqfyGDOGBzKRQFV/8Yr2Ws3
-ttDiqw+bzusB1VOootV6y8CA/1lP17NnQrwuHKa7BFzSESduxQQSpdV8B+pzVVuV
-coDBiGF3coEuex+wcw5hq3YNmbiSd4szBbfkYJEzDc0Zbqr/mCHxNI4dKCmbKi3A
-w/1PKZMtUZ0Hn9Zocs7NrlDVen1dB5LNpncq4TEI0u8jzAxZT9kHiEejgE+UgsD/
-EEHcoyLt33rpP/mt/X46ZOFOUc0kH3KrppRthK+LEmiux9dRhRFEyoq6R1f7aMuB
-rwPA2UAD7Ao1Td+RH3bKuCx/uoMKkACQVMHygsm5TvfyIMwKpAX5s6nkrbIH+YXo
-IXAzcUHxZPJSN/imhO+tMLokrQjOPtzK+gAMEijT8mVeG/Eq9KJjcGS837ayy5Pr
-KOVrMl0Tlff9+ixYcPeBL+I9uaTqOKU202kG124gRUJzVYVtxOoQHTjol1AmqvMN
-KbH283CO8e/XjHPU4b7aYXRCc/tXDOau9b82CWXH2ghRRcpt+L6S/fSa1TaBGZxe
-dWHIN8nMc5XvIRqjyoGDKb4iiFIdsSLNqKUGjyKr00EPzfkdaGYVftkZPFV/QcGy
-wA+6HC6Pa51G21FT4NuBzyTewa+AF8/hvDYlUm5mwJ3Pbwsn6TqWQyJolRyM0QE=
-=NWpm
+RENCRTMyNEQyMjUxNUMxAAoJEJ3L4yTSJRXBbjcf/A8XDNenJi6JWe/lXgYHZSE5
+4fIIvVShMmPc33uvrmJRH0RONJvqVKhJOgyO2JW2sD9VZ4nxMhOiWU0mTv6B/dso
+2k97w+X6eRqlr/tC8e3d4GqaYQvZ6+TXwWwGH/u/ZW6hIqHFsh6Hxp7daH9umn48
+r4tDoOZ1n5EjEmnJpC5VyNmPoH0d4Mf8Tpio6iG1y/eyTWTr+p+3VgmE6ViVhdNV
+mH+UOIAJbejkoxFcFEYzQWbieahMtoNL2OCnrbOy5Suv5O6khWt+6NEkhQvrLU5e
+4/PjfKzYOgEMuQRkeAfEKVBQkYEPNSCZCgFguW5ZH35kwEEyW/mjNQTDN+1jRrz+
+kczMZdujsAMy+4ZBq87+EREvjwTcEvMvIX7Gp2zU5CxpOQjRofKHFHPz+WqIO92D
+QrJzSd70Wq5ezXL381ByhSSC/fd3uigCeqqKID6h+LWW128jcNdlyh+Z36hg7qDG
+bybMiaHSKw7pbW1oSquRu1Y9g5isMVmTHLwnO0Lp0lgj+EPbqnzZiCZ/KKAKBdQw
+d/dD4GUdCnBKQiWB5rfNQ0gglchlECmKJu5qNrPlyOIOvrCG/qD4Ew26KAYk7Dn3
+68ddk64h8F/GDHmSwWvyx1eev0MLX2gQda/C2+1JriA+3Q1/9se6mR2qWBZckLAR
+gYiymgKVTLi7C9Q+ZX6zruptuaShH0WKeRywkE5icKh/LjYMtvcufkWmwIGdPvop
+90SHuAdItrv2pjBbage18BHRkFTt8GPxFgc/JRO2msJfTEzyg1lmdtmdOwQ75V0e
+Ig/mceszGftrueeA3+XD8aHD4+YLG6zQAH4LI1AzTUqAQQShIS3T45f5SFaopmtz
+q8CQKQh6IV+OW1jJHDHglWI+2vYrGx7TYXJ3FW6tE+Dg/kvzTSIpYzHlUx7dEE4n
+Uil8Fqho/MiYZ8l57qisyYVLmhZfgFVnY34un/003zvn+PK9UKq8+ANyqneMoDJD
+/5GrtPJJNAnRjYrktoMLVQhBlptb7uyBTA8Hmo6bS5RwqAqHPsTWx/fXFnfbA8BK
+ShYApySFCgFAtrZT6WlfPnv1kd51iviUYNK2kgD9AhM8lAVfixHWlUxBRlTKrD8X
+D8S17GsSdHYkA6wjXWx0LOSHDg9oBFn6vNsmGOPIdfALOMLwa7a4ghX9weQ5NA/q
+xmE//RrOZR0hmJShMlH/IG8xEP9fJoGXZM2ABTWJtMsWgf+9jnDfpjlUatjab4yy
+JKDkoiPGdnR6ZQMwzk0RJEbw9ICZwHwsGk9+jwzLoKd82BhgMyJYqO3TKszC91Mq
+lgqs2FqgvvCVJv/K45CLF2SYS3h6rRKJJ3bUejvdiYzq1+XrW32KIV9kFmxd6Mo=
+=2D0t
 -----END PGP SIGNATURE-----
 
 ```
@@ -44,8 +44,8 @@ size   exec  file                                                               
 18             .gitignore                                                                  81768f421470e8ac02e783041405324907c6bcf499dff46a62b324e25c943a19
 215            .travis.yml                                                                 1b4fdccb8e91af29189ac75fbeb7c3f878b3c564335d6d19825e547c0f7438c0
 1080           LICENSE                                                                     e282e442d7da213d6edb10459b2692c7405ca8bdac556da9fef3021ab210f78a
-990            README.md                                                                   e8770c0e4ac51b810ae48e73d8b418eff9969d297136aafc62b8e4470508fae8
-14326          keybase.sh                                                                  0807300043b6b067b9a3509477938cc060abad066f19e56199b767f301a11570
+992            README.md                                                                   7cfc0f9d5546f4ca5f87f24e139689e4812a26046c218a1c62f81394da81e9e0
+14328          keybase.sh                                                                  90bd7c03dbb2a72a21d5bab18c831e12432e2826631c5e0e00a7fb32f8faa74e
                lib/                                                                                                                                        
 0                __init__.py                                                               e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2943             completion.py                                                             92216025f2fa07ea9827b07dc03cc8bd6be4a08cd9b7be57fc3f78a1925a1e99
