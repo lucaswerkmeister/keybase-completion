@@ -19,7 +19,7 @@ class Completion():
 
     def run(self, completion_file, program, command):
         self.prepare(program, command)
-        full_cmdline=r'source {compfile}; COMP_LINE="{COMP_LINE}" COMP_WORDS=({COMP_WORDS}) COMP_CWORD={COMP_CWORD} COMP_POINT={COMP_POINT}; $(complete -p {program} | sed "s/.*-F \\([^ ]*\\) .*/\\1/") && echo ${{COMPREPLY[*]}}'.format(
+        full_cmdline=r'source {compfile}; COMP_LINE="{COMP_LINE}" COMP_WORDS=({COMP_WORDS}) COMP_CWORD={COMP_CWORD} COMP_POINT={COMP_POINT}; $(complete -p {program} | sed "s/.*-F \\([^ ]*\\) .*/\\1/") 2>/dev/null && echo ${{COMPREPLY[*]}}'.format(
                 compfile=completion_file, COMP_LINE=self.COMP_LINE, COMP_WORDS=self.COMP_WORDS, COMP_POINT=self.COMP_POINT, program=self.program, COMP_CWORD=self.COMP_CWORD
                 )
         out = subprocess.Popen(['bash', '-i', '-c', full_cmdline], stdout=subprocess.PIPE)
