@@ -47,7 +47,9 @@ function _keybase() {
                                     ;;
                                 -p|--presets)
                                     compopt -o nospace
-                                    COMPREPLY+=($(compgen -W 'git kb dropbox none' -- ${cur}))
+                                    part="$(tmp=",$cur"; echo ${tmp%,*} | cut -c 2-)"
+                                    if [ -n "$part" ]; then part="$part,"; fi
+                                    COMPREPLY+=($(compgen -W "${part}git ${part}kb ${part}dropbox none" -- ${cur}))
                                     return 0
                                     ;;
                             esac
