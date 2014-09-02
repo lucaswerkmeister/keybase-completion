@@ -45,6 +45,12 @@ class KeybaseTestCase(BashCompletionTest):
     def test_assertion_single(self):
         self.run_complete("id --assert gi", "github:")
 
+    def test_config_part(self):
+        self.run_complete("config files.", "files.db files.nedb files.session files.tmp_keyring_dir")
+
+    def test_config_value(self):
+        self.run_complete("config no_color ", "true false")
+
     def run_complete(self, command, expected):
         completion_file="keybase.sh"
         program="keybase"
