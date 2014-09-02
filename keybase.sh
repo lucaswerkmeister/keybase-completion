@@ -87,16 +87,40 @@ function _keybase() {
                 ;;
             config)
                 case $prev in
-                    --get)
+                    -s|--server)
                         return 0
                         ;;
-                    -s|--server)
+                    gpg)
+                        _command
+                        return 0
+                        ;;
+                    merkle_checks)
+                        COMPREPLY+=($(compgen -W 'true false' -- ${cur}))
+                        return 0
+                        ;;
+                    no_color)
+                        COMPREPLY+=($(compgen -W 'true false' -- ${cur}))
+                        return 0
+                        ;;
+                    no_gpg_options)
+                        COMPREPLY+=($(compgen -W 'true false' -- ${cur}))
+                        return 0
+                        ;;
+                    run.d)
+                        COMPREPLY+=($(compgen -W 'true false' -- ${cur}))
+                        return 0
+                        ;;
+                    server.no_tls)
+                        COMPREPLY+=($(compgen -W 'true false' -- ${cur}))
                         return 0
                         ;;
                 esac
                 case $cur in
                     -*)
                         COMPREPLY+=($(compgen -W '--get -j --json --pretty -s --server -S --reset-server' -- ${cur}))
+                        ;;
+                    *)
+                        COMPREPLY+=($(compgen -W 'files.db files.nedb files.session files.tmp_keyring_dir gpg keys.merkle loopback_prt_range merkle_checks no_color no_gpg_options proxy.ca_certs proxy.url run.d run.log_level run.mode server.api_uri_prefix server.host server.no_tls server.port user.email user.id user.name user.passphrase' -- ${cur}))
                         ;;
                 esac
                 return 0

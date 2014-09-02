@@ -1,3 +1,13 @@
+## 1.2.0
+
+Features:
+
+  - First part of assertions complete
+  - Presets complete on codesign
+  - Unittests for Completion added
+  - config keys complete, also true/false values
+  - Changelog retroactively added
+
 ## 1.1.1 (2014-08-22)
 
 Bugfixes:
