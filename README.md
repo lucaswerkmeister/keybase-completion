@@ -13,8 +13,8 @@ Installation
 ```sh
 git clone git@github.com:dtiersch/keybase-completion.git
 cd keybase-completion
-sudo cp keybase.sh /etc-bash_completion.d/keybase
-sudo chmod a+r /etc-bash_completion.d/keybase
+sudo cp keybase.sh /etc/bash_completion.d/keybase
+sudo chmod a+r /etc/bash_completion.d/keybase
 ```
 
 #####User Space
@@ -30,6 +30,18 @@ Version
 -------
 
 1.1.1
+
+Integrity / GPG
+---------------
+
+You can check the integrity of Releases on 2 different ways. For one every git tag is GPG signed. Check that with
+```
+git tag -v version_1.1
+```
+The whole directory (in the `master` branch) is signed as well, you can check that with keybase
+```
+keybase dir verify
+```
 
 License
 -------

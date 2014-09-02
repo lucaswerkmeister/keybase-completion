@@ -39,6 +39,30 @@ class KeybaseTestCase(BashCompletionTest):
     def test_proof_single(self):
         self.run_complete("proof twitter ", "")
 
+    def test_assertion(self):
+        self.run_complete("id --assert ", "github: coinbase: twitter: web: key: keybase: reddit: hackernews: dns:")
+
+    def test_assertion_single(self):
+        self.run_complete("id --assert gi", "github:")
+
+    def test_config_part(self):
+        self.run_complete("config files.", "files.db files.nedb files.session files.tmp_keyring_dir")
+
+    def test_config_value(self):
+        self.run_complete("config no_color ", "true false")
+
+    def test_preset_all(self):
+        self.run_complete("dir sign --presets ", "git kb dropbox none")
+
+    def test_preset_single(self):
+        self.run_complete("dir sign --presets gi", "git")
+
+    def test_preset_2nd_all(self):
+        self.run_complete("dir sign --presets git,", "git,git git,kb git,dropbox")
+
+    def test_preset_2nd_single(self):
+        self.run_complete("dir sign --presets git,dr", "git,dropbox")
+
     def run_complete(self, command, expected):
         completion_file="keybase.sh"
         program="keybase"
