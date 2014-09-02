@@ -51,6 +51,18 @@ class KeybaseTestCase(BashCompletionTest):
     def test_config_value(self):
         self.run_complete("config no_color ", "true false")
 
+    def test_preset_all(self):
+        self.run_complete("dir sign --presets ", "git kb dropbox none")
+
+    def test_preset_single(self):
+        self.run_complete("dir sign --presets gi", "git")
+
+    def test_preset_2nd_all(self):
+        self.run_complete("dir sign --presets git,", "git,git git,kb git,dropbox")
+
+    def test_preset_2nd_single(self):
+        self.run_complete("dir sign --presets git,dr", "git,dropbox")
+
     def run_complete(self, command, expected):
         completion_file="keybase.sh"
         program="keybase"
