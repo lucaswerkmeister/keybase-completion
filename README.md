@@ -29,7 +29,7 @@ test -r /path/to/repository/keybase.sh && source $_
 Version
 -------
 
-1.2
+1.2.1
 
 Integrity / GPG
 ---------------

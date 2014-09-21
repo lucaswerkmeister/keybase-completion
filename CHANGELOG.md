@@ -1,3 +1,9 @@
+## 1.2.1 (2014-09-21)
+
+Bugfixes:
+
+  - completion searches user now in XDG-dirs if available
+
 ## 1.2.0 (2014-09-02)
 
 Features:
