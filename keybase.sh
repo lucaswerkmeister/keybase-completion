@@ -6,7 +6,17 @@ function _keybase_assertion() {
 }
 
 function _keybase_tracked() {
-    local user="$(grep '"username":' $HOME/.keybase/keybase.idb/*/*/* | sed -r 's/.*"username":"([^"]+).*/\1/' | sort)"
+    if $([ -n "$XDG_DATA_HOME" ] && [ -d "$XDG_DATA_HOME/keybase" ]); then
+        keybase_dir="$XDG_DATA_HOME/keybase"
+    elif [ -d "$HOME/.local/share/keybase" ]; then
+        keybase_dir="$HOME/.local/share/keybase"
+    elif [ -d "$HOME/.keybase" ]; then
+        keybase_dir="$HOME/.keybase"
+    else
+        return 0
+    fi
+
+    local user="$(grep '"username":' $keybase_dir/keybase.idb/*/*/* | sed -r 's/.*"username":"([^"]+).*/\1/' | sort)"
     COMPREPLY+=($(compgen -W "$user" -- ${cur}))
 }
 
