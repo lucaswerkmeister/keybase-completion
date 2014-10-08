@@ -1,7 +1,7 @@
 function _keybase_assertion() {
-    compopt -o nospace
+    #compopt -o nospace
     #see list in https://github.com/keybase/node-client/blob/master/src/assertions.iced#L69:L89
-    COMPREPLY+=($(compgen -W 'github: coinbase: twitter: web: key: keybase: reddit: hackernews: dns:' -- ${cur}))
+    #COMPREPLY+=($(compgen -W 'github: coinbase: twitter: web: key: keybase: reddit: hackernews: dns:' -- ${cur}))
     return 0
 }
 
