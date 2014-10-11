@@ -1,3 +1,9 @@
+## UPCOMING
+
+Bugfixes:
+
+  - old assertion completion deactivated
+
 ## 1.2.1 (2014-09-21)
 
 Bugfixes:
