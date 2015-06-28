@@ -1,5 +1,7 @@
 ## UPCOMING
 
+## 1.2.2 (2015-06-28)
+
 Bugfixes:
 
   - old assertion completion deactivated
