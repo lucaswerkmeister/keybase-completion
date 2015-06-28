@@ -3,6 +3,7 @@
 Bugfixes:
 
   - old assertion completion deactivated
+  - config option user.fingerprint added
 
 ## 1.2.1 (2014-09-21)
 

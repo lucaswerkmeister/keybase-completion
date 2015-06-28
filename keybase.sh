@@ -132,7 +132,7 @@ function _keybase() {
                         COMPREPLY+=($(compgen -W '--get -j --json --pretty -s --server -S --reset-server' -- ${cur}))
                         ;;
                     *)
-                        COMPREPLY+=($(compgen -W 'files.db files.nedb files.session files.tmp_keyring_dir gpg keys.merkle loopback_prt_range merkle_checks no_color no_gpg_options proxy.ca_certs proxy.url run.d run.log_level run.mode server.api_uri_prefix server.host server.no_tls server.port user.email user.id user.name user.passphrase' -- ${cur}))
+                        COMPREPLY+=($(compgen -W 'files.db files.nedb files.session files.tmp_keyring_dir gpg keys.merkle loopback_prt_range merkle_checks no_color no_gpg_options proxy.ca_certs proxy.url run.d run.log_level run.mode server.api_uri_prefix server.host server.no_tls server.port user.email user.fingerprint user.id user.name user.passphrase' -- ${cur}))
                         ;;
                 esac
                 return 0
