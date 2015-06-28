@@ -1,7 +1,7 @@
 function _keybase_assertion() {
-    compopt -o nospace
+    #compopt -o nospace
     #see list in https://github.com/keybase/node-client/blob/master/src/assertions.iced#L69:L89
-    COMPREPLY+=($(compgen -W 'github: coinbase: twitter: web: key: keybase: reddit: hackernews: dns:' -- ${cur}))
+    #COMPREPLY+=($(compgen -W 'github: coinbase: twitter: web: key: keybase: reddit: hackernews: dns:' -- ${cur}))
     return 0
 }
 
@@ -132,7 +132,7 @@ function _keybase() {
                         COMPREPLY+=($(compgen -W '--get -j --json --pretty -s --server -S --reset-server' -- ${cur}))
                         ;;
                     *)
-                        COMPREPLY+=($(compgen -W 'files.db files.nedb files.session files.tmp_keyring_dir gpg keys.merkle loopback_prt_range merkle_checks no_color no_gpg_options proxy.ca_certs proxy.url run.d run.log_level run.mode server.api_uri_prefix server.host server.no_tls server.port user.email user.id user.name user.passphrase' -- ${cur}))
+                        COMPREPLY+=($(compgen -W 'files.db files.nedb files.session files.tmp_keyring_dir gpg keys.merkle loopback_prt_range merkle_checks no_color no_gpg_options proxy.ca_certs proxy.url run.d run.log_level run.mode server.api_uri_prefix server.host server.no_tls server.port user.email user.fingerprint user.id user.name user.passphrase' -- ${cur}))
                         ;;
                 esac
                 return 0
