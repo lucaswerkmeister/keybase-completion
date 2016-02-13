@@ -1,6 +1,10 @@
 keybase-completion
 ==================
 
+ATTENTION
+---------
+currently only the old node.js version is supported. Update for current GO-client is in the works...
+
 [![Build Status](https://travis-ci.org/dtiersch/keybase-completion.svg?branch=master)](https://travis-ci.org/dtiersch/keybase-completion)
 
 The [keybase command line tool](https://keybase.io/docs/command_line) lacks Tab completion by default (see [Issue #147](https://github.com/keybase/keybase-issues/issues/147) in the Keybase Bugtracker). This is an approach to satisfy the needs and lift the usabilty of keybase on the command line to a whole new level.
