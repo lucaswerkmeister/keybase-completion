@@ -1,0 +1,20 @@
+function _keybase() {
+    local cur prev prevs lprev
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    prevs=("${COMP_WORDS[@]:1:COMP_CWORD-1}")
+    lprev=${#prevs[@]}
+
+    local commands="base62 btc cert ctl decrypt deprovision device encrypt id list-trackers list-tracking log login logout paperkey passphrase pgp ping prove search sign signup sigs status track unlock untrack update verify version help"
+    #local args=""
+
+    if [[ $COMP_CWORD -gt 1 ]]; then
+        echo -n "" //do nothing - for now
+    else
+        COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+    fi
+}
+complete -F _keybase keybase
+
+# vim: syntax=sh sts=4 ts=4 sw=4 sr et
