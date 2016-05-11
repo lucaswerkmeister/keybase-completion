@@ -6,7 +6,7 @@ function _keybase() {
     prevs=("${COMP_WORDS[@]:1:COMP_CWORD-1}")
     lprev=${#prevs[@]}
 
-    local commands="base62 btc cert ctl decrypt deprovision device encrypt id list-trackers list-tracking log login logout paperkey passphrase pgp ping prove search sign signup sigs status track unlock untrack update verify version help"
+    local commands="base62 btc cert config ctl decrypt deprovision device encrypt id list-trackers list-tracking log login logout paperkey passphrase pgp ping prove search sign signup sigs status track unlock untrack update verify version help"
     #local args=""
 
     if [[ $lprev -eq 0 ]]; then
@@ -25,6 +25,24 @@ function _keybase() {
                 ;;
             cert)
                 return 0
+                ;;
+            config)
+                if [[ $lprev -eq 1 ]]; then
+                    commands="get set info help"
+                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                commands="get set info"
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
+                    return 0
+                fi
                 ;;
             ctl)
                 if [[ $lprev -eq 1 ]]; then
