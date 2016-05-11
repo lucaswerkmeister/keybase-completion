@@ -110,7 +110,11 @@ function _keybase() {
                 return 0
                 ;;
             prove)
-                return 0
+                if [[ $lprev -eq 1 ]]; then
+                    local services="coinbase dns github hackernews http reddit twitter"
+                    COMPREPLY+=($(compgen -W "${services}" -- ${cur}))
+                    return 0
+                fi
                 ;;
             search)
                 return 0
