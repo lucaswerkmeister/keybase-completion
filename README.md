@@ -9,7 +9,7 @@ Installation
 #####Global
 
 ```sh
-git clone git@github.com:dtiersch/keybase-completion.git
+git clone https://github.com/dtiersch/keybase-completion.git
 cd keybase-completion
 sudo cp keybase /etc/bash_completion.d/keybase
 sudo chmod a+r /etc/bash_completion.d/keybase
@@ -17,7 +17,7 @@ sudo chmod a+r /etc/bash_completion.d/keybase
 
 #####User Space
 ```sh
-git clone git@github.com:dtiersch/keybase-completion.git
+git clone https://github.com/dtiersch/keybase-completion.git
 ```
 Then add the following line to your `.bashrc`:
 ```sh
