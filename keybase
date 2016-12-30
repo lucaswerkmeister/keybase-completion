@@ -167,7 +167,6 @@ function _keybase() {
             unfollow)
                 return 0
                 ;;
-                #update verify version"
             unlock)
                 return 0
                 ;;
