@@ -5,7 +5,7 @@ function _keybase() {
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    prevs=("${COMP_WORDS[@]:1:COMP_CWORD-1}")
+    prevs=("${COMP_WORDS[@]:1:$COMP_CWORD-1}")
     lprev=${#prevs[@]}
 
     # Will try to keep args and their cases sorted alphabetically -jhazelwo
