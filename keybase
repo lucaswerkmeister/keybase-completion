@@ -23,15 +23,14 @@ function _keybase() {
                 fi
                 ;;
             chat)
+                commands="api delete-channel delete-history download hide join-channel leave-channel rename-channel create-channel list list-channels list-members list-unread mute read readd-member report retention-policy search send upload"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="api delete-channel delete-history download hide join-channel leave-channel rename-channel create-channel list list-channels list-members list-unread mute read readd-member report retention-policy search send upload help"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
                     return 0
                 else
                     case "${prevs[1]}" in
                         help)
                             if [[ $lprev -eq 2 ]]; then
-                                commands="api delete-channel delete-history download hide join-channel leave-channel rename-channel create-channel list list-channels list-members list-unread mute read readd-member report retention-policy search send upload"
                                 COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
                                 return 0
                             fi
@@ -44,15 +43,14 @@ function _keybase() {
                 return 0
                 ;;
             config)
+                commands="get set info"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="get set info help"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
                     return 0
                 else
                     case "${prevs[1]}" in
                         help)
                             if [[ $lprev -eq 2 ]]; then
-                                commands="get set info"
                                 COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
                                 return 0
                             fi
@@ -180,15 +178,14 @@ function _keybase() {
                 return 0
                 ;;
             team)
+                commands="create add-member remove-member edit-member list-memberships list-members show-tree rename request-access list-requests ignore-request accept-invite leave delete api settings profile-load"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="create add-member remove-member edit-member list-memberships list-members show-tree rename request-access list-requests ignore-request accept-invite leave delete api settings profile-load help"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
                     return 0
                 else
                     case "${prevs[1]}" in
                         help)
                             if [[ $lprev -eq 2 ]]; then
-                                commands="create add-member remove-member edit-member list-memberships list-members show-tree rename request-access list-requests ignore-request accept-invite leave delete api settings profile-load"
                                 COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
                                 return 0
                             fi
