@@ -9,7 +9,7 @@ function _keybase() {
     lprev=${#prevs[@]}
 
     # Will try to keep args and their cases sorted alphabetically -jhazelwo
-    local commands="base62 chat cert config ctl currency decrypt deprovision device dump-keyfamily encrypt follow help id list-followers list-following log login logout paperkey passphrase pgp ping prove rekey search sign signup sigs status track unfollow unlock untrack update verify version"
+    local commands="base62 chat cert config ctl currency decrypt deprovision device dump-keyfamily encrypt follow help id list-followers list-following log login logout paperkey passphrase pgp ping prove rekey search sign signup sigs status team track unfollow unlock untrack update verify version"
 
     if [[ $lprev -eq 0 ]]; then
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
@@ -19,6 +19,24 @@ function _keybase() {
                 if [[ $lprev -eq 1 ]]; then
                     commands="decode encode"
                     COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    return 0
+                fi
+                ;;
+            chat)
+                if [[ $lprev -eq 1 ]]; then
+                    commands="api delete-channel delete-history download hide join-channel leave-channel rename-channel create-channel list list-channels list-members list-unread mute read readd-member report retention-policy search send upload help"
+                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                commands="api delete-channel delete-history download hide join-channel leave-channel rename-channel create-channel list list-channels list-members list-unread mute read readd-member report retention-policy search send upload"
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
