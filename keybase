@@ -16,9 +16,19 @@ function _keybase() {
     else
         case "${prevs[0]}" in
             base62)
+                commands="decode encode"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="decode encode"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
@@ -60,16 +70,36 @@ function _keybase() {
                 fi
                 ;;
             ctl)
+                commands="app-exit log-rotate reload restart start stop watchdog watchdog2"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="app-exit log-rotate reload restart start stop watchdog watchdog2"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
             currency)
+                commands="add"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="add"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
@@ -80,9 +110,19 @@ function _keybase() {
                 return 0
                 ;;
             device)
+                commands="remove list add"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="remove list add"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
@@ -96,9 +136,9 @@ function _keybase() {
                 return 0
                 ;;
             help)
+                commands="$commands advanced gpg keyring tor"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="$commands advanced gpg keyring tor"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
                     return 0
                 fi
                 ;;
@@ -112,9 +152,19 @@ function _keybase() {
                 return 0
                 ;;
             log)
+                commands="send"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="send"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
@@ -128,16 +178,36 @@ function _keybase() {
                 return 0
                 ;;
             passphrase)
+                commands="change recover"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="change recover"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
             pgp)
+                commands="gen pull update select sign encrypt decrypt verify export import drop list purge"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="gen pull update select sign encrypt decrypt verify export import drop list purge"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
@@ -152,9 +222,19 @@ function _keybase() {
                 fi
                 ;;
             rekey)
+                commands="status paper"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="status paper"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
@@ -168,9 +248,19 @@ function _keybase() {
                 return 0
                 ;;
             sigs)
+                commands="list revoke"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="list revoke"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
@@ -207,9 +297,19 @@ function _keybase() {
                 return 0
                 ;;
             update)
+                commands="check run check-in-use notify"
                 if [[ $lprev -eq 1 ]]; then
-                    commands="check run check-in-use notify"
-                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    COMPREPLY+=($(compgen -W "${commands} help" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
                     return 0
                 fi
                 ;;
