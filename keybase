@@ -9,7 +9,7 @@ function _keybase() {
     lprev=${#prevs[@]}
 
     # Will try to keep args and their cases sorted alphabetically -jhazelwo
-    local commands="base62 cert config ctl currency decrypt deprovision device dump-keyfamily encrypt follow help id list-followers list-following log login logout paperkey passphrase pgp ping prove rekey search sign signup sigs status track unfollow unlock untrack update verify version"
+    local commands="base62 chat cert config ctl currency decrypt deprovision device dump-keyfamily encrypt follow help id list-followers list-following log login logout paperkey passphrase pgp ping prove rekey search sign signup sigs status track unfollow unlock untrack update verify version"
 
     if [[ $lprev -eq 0 ]]; then
         COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
@@ -160,6 +160,24 @@ function _keybase() {
                 ;;
             status)
                 return 0
+                ;;
+            team)
+                if [[ $lprev -eq 1 ]]; then
+                    commands="create add-member remove-member edit-member list-memberships list-members show-tree rename request-access list-requests ignore-request accept-invite leave delete api settings profile-load help"
+                    COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                    return 0
+                else
+                    case "${prevs[1]}" in
+                        help)
+                            if [[ $lprev -eq 2 ]]; then
+                                commands="create add-member remove-member edit-member list-memberships list-members show-tree rename request-access list-requests ignore-request accept-invite leave delete api settings profile-load"
+                                COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
+                                return 0
+                            fi
+                            ;;
+                    esac
+                    return 0
+                fi
                 ;;
             track)
                 return 0
